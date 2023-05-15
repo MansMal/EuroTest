@@ -16,6 +16,10 @@
 		F97FEC152A1232CD0076B2FB /* GlobalFunc+Var.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97FEC0B2A1227DE0076B2FB /* GlobalFunc+Var.swift */; };
 		F97FEC162A1232EF0076B2FB /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E476CC2A1218C0001C9369 /* ListViewController.swift */; };
 		F97FEC172A1232F50076B2FB /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97FEC112A122DAC0076B2FB /* ListViewModel.swift */; };
+		F97FEC192A123AEA0076B2FB /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97FEC182A123AEA0076B2FB /* PhotoCollectionViewCell.swift */; };
+		F97FEC1A2A123AEA0076B2FB /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97FEC182A123AEA0076B2FB /* PhotoCollectionViewCell.swift */; };
+		F97FEC1C2A1240800076B2FB /* PhotoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97FEC1B2A1240800076B2FB /* PhotoCellViewModel.swift */; };
+		F97FEC1D2A1240800076B2FB /* PhotoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97FEC1B2A1240800076B2FB /* PhotoCellViewModel.swift */; };
 		F9E476C92A1218C0001C9369 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E476C82A1218C0001C9369 /* AppDelegate.swift */; };
 		F9E476CB2A1218C0001C9369 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E476CA2A1218C0001C9369 /* SceneDelegate.swift */; };
 		F9E476CD2A1218C0001C9369 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E476CC2A1218C0001C9369 /* ListViewController.swift */; };
@@ -64,6 +68,8 @@
 		F97FEC0B2A1227DE0076B2FB /* GlobalFunc+Var.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GlobalFunc+Var.swift"; sourceTree = "<group>"; };
 		F97FEC0E2A122D810076B2FB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		F97FEC112A122DAC0076B2FB /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		F97FEC182A123AEA0076B2FB /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		F97FEC1B2A1240800076B2FB /* PhotoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCellViewModel.swift; sourceTree = "<group>"; };
 		F9E476C52A1218C0001C9369 /* EuroTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EuroTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E476C82A1218C0001C9369 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9E476CA2A1218C0001C9369 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +150,8 @@
 				F9E476CC2A1218C0001C9369 /* ListViewController.swift */,
 				F97FEC112A122DAC0076B2FB /* ListViewModel.swift */,
 				F97FEC0E2A122D810076B2FB /* DetailsViewController.swift */,
+				F97FEC182A123AEA0076B2FB /* PhotoCollectionViewCell.swift */,
+				F97FEC1B2A1240800076B2FB /* PhotoCellViewModel.swift */,
 				F9E477002A1222E5001C9369 /* Dispatcher.swift */,
 				F9E477042A122306001C9369 /* Extension.swift */,
 				F97FEC0B2A1227DE0076B2FB /* GlobalFunc+Var.swift */,
@@ -334,11 +342,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F97FEC1C2A1240800076B2FB /* PhotoCellViewModel.swift in Sources */,
 				F97FEC0C2A1227DE0076B2FB /* GlobalFunc+Var.swift in Sources */,
 				F9E477092A1223A7001C9369 /* ImageLoader.swift in Sources */,
 				F9E477052A122306001C9369 /* Extension.swift in Sources */,
 				F9E476CD2A1218C0001C9369 /* ListViewController.swift in Sources */,
 				F9E476FA2A121E5B001C9369 /* DataModel.swift in Sources */,
+				F97FEC192A123AEA0076B2FB /* PhotoCollectionViewCell.swift in Sources */,
 				F9E476C92A1218C0001C9369 /* AppDelegate.swift in Sources */,
 				F9E4770D2A1224A3001C9369 /* APIConfigurator.swift in Sources */,
 				F9E476CB2A1218C0001C9369 /* SceneDelegate.swift in Sources */,
@@ -357,7 +367,9 @@
 				F9E477062A122306001C9369 /* Extension.swift in Sources */,
 				F9E477022A1222E5001C9369 /* Dispatcher.swift in Sources */,
 				F9E4770A2A1223A7001C9369 /* ImageLoader.swift in Sources */,
+				F97FEC1A2A123AEA0076B2FB /* PhotoCollectionViewCell.swift in Sources */,
 				F97FEC132A122DAC0076B2FB /* ListViewModel.swift in Sources */,
+				F97FEC1D2A1240800076B2FB /* PhotoCellViewModel.swift in Sources */,
 				F9E476E02A1218C1001C9369 /* EuroTestTests.swift in Sources */,
 				F97FEC142A1232650076B2FB /* DataModel.swift in Sources */,
 			);

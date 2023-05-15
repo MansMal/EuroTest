@@ -8,6 +8,21 @@
 import Foundation
 
 // swiftlint:disable identifier_name
+enum Type {
+case story
+case video
+}
+
+struct CollectionItem: Identifiable, Hashable {
+    var id: UUID? = UUID()
+    var type: Type
+    var imageURL: String
+    var subTitle: String
+    var title: String
+    var desc: String
+    var date: Double
+}
+
 struct APIResponse: Codable {
     var videos: [Video]
     var stories: [Story]
