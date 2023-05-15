@@ -1,0 +1,186 @@
+{
+  "videos": [
+    {
+      "id": 777788,
+      "title": "CHRONIQUE FRITSCH",
+      "thumb": "https://i.eurosport.com/2020/01/27/2763745-57096910-2560-1440.jpg",
+      "url": "https://vod-eurosport.akamaized.net/nogeo/2019/10/22/CHRONIQUE_FRITSCH_22102019_V1_22040825-1254400-2300-1024-576.mp4",
+      "date": 1588224445.007,
+      "sport": {
+        "id": 22,
+        "name": "Football"
+      },
+      "views": 12333
+    },
+    {
+      "id": 777799,
+      "title": "Snooker finish",
+      "thumb": "https://i.eurosport.com/2018/09/14/2418542-50269610-2560-1440.jpg",
+      "url": "https://vod-eurosport.akamaized.net/ebu-au/2019/12/08/snookfinish-1269077-700-512-288.mp4",
+      "date": 1588104445.007,
+      "sport": {
+        "id": 33,
+        "name": "Snooker"
+      },
+      "views": 444
+    },
+    {
+      "id": 777689,
+      "title": "Snooker Trohpey",
+      "thumb": "https://i.eurosport.com/2019/12/08/2732922-56480450-2560-1440.jpg",
+      "url": "https://vod-eurosport.akamaized.net/ebu-au/2019/12/08/trophey-1269106-700-512-288.mp4",
+      "date": 1488133445.007,
+      "sport": {
+        "id": 33,
+        "name": "Snooker"
+      },
+      "views": 1023
+    },
+    {
+      "id": 774689,
+      "title": "Il n'en fallait pas plus au Real pour relancer le feuilleton Mbappé",
+      "thumb": "https://imgresizer.eurosport.com/unsafe/1200x0/filters:focal(402x374:404x372)/origin-imgresizer.eurosport.com/2019/09/01/2667509-55172490-2560-1440.jpg",
+      "url": "https://vod-eurosport.akamaized.net/ebu-au/2020/04/30/MERCATO_BUZZ_30042020-5eaaa0331066736b896c4e9f_Apr_30_2020_14_12_23_30041802-1311979-2300-1024-576.mp4",
+      "date": 1488113445.007,
+      "sport": {
+        "id": 22,
+        "name": "Football"
+      },
+      "views": 8950
+    }
+  ],
+  "stories": [
+    {
+      "id": 7738009,
+      "title": "Tour de France, arrêt de la L1, Agassi-Sampras, 8 secondes : le plateau du jour",
+      "teaser": "Ce soir, c'est le weekend ! En ce 46e jour de confinement, il y a donc toutes les raisons d'avoir la forme. Surtout qu'il va y avoir de l'actualité ce jeudi. Cerise sur le gâteau : si vous voulez vous replonger dans les plus belles heures du sport, on a tout ce qu’il faut pour vous. Voici notre plateau matinal.",
+      "image": "https://i.eurosport.com/2020/04/30/2812653-58018086-640-220.jpg",
+      "date": 1588222335.007,
+      "author": "John doe",
+      "sport": {
+        "id": 95,
+        "name": "Omnisport"
+      }
+    },
+    {
+      "id": 7738025,
+      "title": "Mourad de Toulon : \"Tillous-Borde mérite le respect. J'espère que le RCT s'en souviendra\"",
+      "teaser": "Toujours confiné à son domicile, Mourad Boudjellal est un spectateur attentif du monde du rugby. Grâce à son épouse Linda et sa fille Roselaine, transformées en réalisatrices, l'ancien président du RCT porte son regard sur l'ouverture de la saison des transferts ou sur le salaire de Pollard à Montpellier. Le coup de coeur de la semaine, il est quant à lui pour Sébastien Tilllous-Borde...",
+      "image": "https://i.eurosport.com/2020/04/29/2812626-58017546-640-220.png",
+      "date": 1588224705.843,
+      "author": "Mike Swiss",
+      "sport": {
+        "id": 44,
+        "name": "Rugby"
+      }
+    },
+    {
+      "id": 7737839,
+      "title": "Malgré l'arrêt de la L1, le PSG et Lyon pourraient jouer en C1 selon un membre exécutif de l'UEFA",
+      "teaser": "Andre Agassi fête mercredi son 50e anniversaire. Pour l'occasion, on vous propose un quiz sur un aspect important de l'oeuvre du \"Kid de Las Vegas\" : le style. A vous d'identifier s'il s'agit ou non de l'homme aux huit titres du Grand Chelem sur les photos suivantes.",
+      "image": "https://i.eurosport.com/2009/10/28/554648-6892499-128-96.jpg",
+      "date": 1588112029.433,
+      "author": "Rémy De Souza",
+      "sport": {
+        "id": 22,
+        "name": "Football"
+      }
+    },
+    {
+      "id": 7736814,
+      "title": "Quiz - Agassi a 50 ans mais a-t-il porté ces tenues ?",
+      "teaser": "Andre Agassi a 50 ans ce jour. Entre 1986 et 2006, il en a passé 20 sur le circuit, ces mêmes 20 années durant lesquelles j'ai façonné ma passion pour le tennis au rythme de sa grandeur ou, parfois, de sa décadence. Il est LE champion de ma jeunesse, celui qui m'aura le plus marqué, pour tout un tas de raisons. Voici donc mon ode à Dédé.",
+      "image": "https://i.eurosport.com/2019/11/27/2725182.jpg",
+      "date": 1588110350.85,
+      "author": "Rémi Bourrières",
+      "sport": {
+        "id": 57,
+        "name": "Tennis"
+      }
+    },
+    {
+      "id": 7737687,
+      "title": "Une pincée de mauvaise foi mais pas que : Les playoffs d’Aulas sont-ils pertinents ?",
+      "teaser": "LIGUE 1 - Alors qu’Edouard Philippe a confirmé mardi l’arrêt des championnats, Jean-Michel Aulas a proposé de jouer des playoffs en août pour terminer la saison. Sous quelle forme les organiser ? Pourraient-ils vraiment se jouer ? Est-ce que des playoffs arrangeraient l’Olympique lyonnais ? Zoom sur la proposition polémique du président des Gones..",
+      "image": "https://i.eurosport.com/_iss_/sport/football/competition/logo/large/54.png",
+      "date": 1588171753.103,
+      "author": "Sasha Beckermann",
+      "sport": {
+        "id": 22,
+        "name": "Football"
+      }
+    },
+    {
+      "id": 7737812,
+      "title": "🎧 Huit secondes",
+      "teaser": "PODCAST - LES GRANDS RECITS - Le 23 juillet 1989 s'achevait un des Tours de France les plus extraordinaires de l'histoire. Trois semaines épiques, entre rebondissements, suspense et tensions. Un Tour qui s'est résumé à deux hommes, Greg LeMond et Laurent Fignon. Et à un chiffre : huit. Comme les huit secondes qui vont séparer les deux hommes à Paris et les réunir à jamais dans la légende.",
+      "image": "https://i.eurosport.com/2013/07/02/1037463-16689785-128-96.jpg",
+      "date": 1588197999.47,
+      "author": "Hadrien Hiault",
+      "sport": {
+        "id": 18,
+        "name": "Cyclisme"
+      }
+    },
+    {
+      "id": 7736790,
+      "title": "Nombre de courses, huis clos, format de week-ends... : 10 enjeux pour sauver la F1",
+      "teaser": "FORMULE 1 2020 - Des courses à huis clos étant la seule solution envisageable pour que des Grands Prix aient lieu cette saison, des questions se posent sur leur nombre pour faire un championnat du monde, leurs conditions sanitaires ou encore leurs montages financiers. Éléments de réponses.",
+      "image": "https://i.eurosport.com/2013/07/02/1037463-16689785-128-96.jpg",
+      "date": 1588197274.257,
+      "author": "Stéphane Vrignaud",
+      "sport": {
+        "id": 25,
+        "name": "Formule 1"
+      }
+    },
+    {
+      "id": 7735290,
+      "title": "Du moins marquant au plus mythique, nous avons classé les 34 duels de la rivalité Sampras-Agassi",
+      "teaser": "Comme tous les grands de l’Histoire du jeu, Andre Agassi a dû ferrailler avec un rival de choix pour forger sa propre légende. Qui sait si, sans Pete Sampras, le \"Kid de Las Vegas\" ne serait pas plus souvent cité dans le débat récurrent sur l’hypothétique meilleur joueur de tous les temps ? Retour sur les 34 duels (20-14 pour Sampras) entre les deux Américains aux styles si complémentaires.",
+      "image": "https://i.eurosport.com/2020/04/29/2812635-58017726-640-220.jpg",
+      "date": 1588196794.537,
+      "author": "Maxime Battistella",
+      "sport": {
+        "id": 57,
+        "name": "Tennis"
+      }
+    },
+    {
+      "id": 7736568,
+      "title": "Mes années \"Dédé\" : on a tous en nous quelque chose d'Agassi",
+      "teaser": "Andre Agassi a 50 ans ce jour. Entre 1986 et 2006, il en a passé 20 sur le circuit, ces mêmes 20 années durant lesquelles j'ai façonné ma passion pour le tennis au rythme de sa grandeur ou, parfois, de sa décadence. Il est LE champion de ma jeunesse, celui qui m'aura le plus marqué, pour tout un tas de raisons. Voici donc mon ode à Dédé.",
+      "image": "https://i.eurosport.com/2019/11/27/2725182.jpg",
+      "date": 1588110350.85,
+      "author": "Rémi Bourrières",
+      "sport": {
+        "id": 57,
+        "name": "Tennis"
+      }
+    },
+    {
+      "id": 7737742,
+      "title": "La Vuelta amputée de trois étapes",
+      "teaser": "TOUR D'ESPAGNE - Contrainte de changer de place dans le calendrier suite au report du Tour de France et dans un contexte de crise du coronavirus, la Vuelta 2020 ne comptera que 18 étapes au lieu des 21 prévues. Les trois journées programmées aux Pays-Bas sont ainsi supprimées et le départ est prévu au Pays Basque entre Irun et Arate.",
+      "image": "https://i.eurosport.com/2019/11/27/2725182.jpg",
+      "date": 1588170827.457,
+      "author": "Simon Farvacque",
+      "sport": {
+        "id": 18,
+        "name": "Cyclisme"
+      }
+    },
+    {
+      "id": 7736588,
+      "title": "Guillen : \"La Vuelta doit être la preuve que nous retrouvons nos vies\"",
+      "teaser": "TOUR D'ESPAGNE - La Vuelta fête son 85e anniversaire cette semaine. Mais on ignore encore quand et comment elle se disputera en 2020. Une chose est sûre, elle est espérée et attendue par Javier Guillen, directeur du Grand Tour espagnol.",
+      "image": "https://i.eurosport.com/2017/04/14/2062976-43255022-128-96.jpg",
+      "date": 1588165865.817,
+      "author": "Benoît Vittek",
+      "sport": {
+        "id": 18,
+        "name": "Cyclisme"
+      }
+    }
+  ]
+}

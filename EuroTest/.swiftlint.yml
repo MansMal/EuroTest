@@ -2,5 +2,5 @@ disabled_rules:
 
   # rules we might keep, but that likely need fine-tuning if we do
   - line_length
-  - file_length
   - vertical_whitespace
+  - trailing_whitespace
