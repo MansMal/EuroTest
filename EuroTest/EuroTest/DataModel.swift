@@ -17,16 +17,16 @@ struct Video: Codable {
     var title: String
     var thumb: String
     var url: String
-    var date: Int
+    var date: Double
     var sport: Sport
-    var view: Int
+    var views: Int
 }
 struct Story: Codable {
     var id: Int
     var title: String
     var teaser: String
     var image: String
-    var date: Int
+    var date: Double
     var author: String
     var sport: Sport
 }

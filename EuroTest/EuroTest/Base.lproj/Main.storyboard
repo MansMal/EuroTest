@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EuroTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ListViewController" customModule="EuroTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,15 +20,34 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="WUZ-7c-Y18"/>
+                    <connections>
+                        <segue destination="rbe-96-L3x" kind="show" identifier="showDetails" id="Uv7-Ym-8LJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="897" y="-2"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Details View Controller-->
+        <scene sceneID="jsL-Sj-Tet">
+            <objects>
+                <viewController id="rbe-96-L3x" customClass="DetailsViewController" customModule="EuroTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tRI-7F-GC6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="EpO-WM-ioh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vbO-sj-cXp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mKO-ia-zXg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1824" y="-2"/>
+        </scene>
+        <!--FEATURED-->
         <scene sceneID="R46-ue-C1D">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1KU-2N-4MR" sceneMemberID="viewController">
+                <navigationController title="FEATURED" automaticallyAdjustsScrollViewInsets="NO" id="1KU-2N-4MR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="igQ-5H-ORf">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>

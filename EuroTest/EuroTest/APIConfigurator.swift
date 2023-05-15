@@ -9,14 +9,24 @@
 import Foundation
 import UIKit
 
+protocol APIConfiguratorContract: AnyObject {
+    func fetchAllData(mocked: Bool, completion: @escaping completionHandler<APIResponse>) async throws
+    var apiURL: String { get set }
+}
+
 enum Method: String {
     case get, post, put, delete
 }
-final class APIConfigurator: ObservableObject {
+final class APIConfigurator: APIConfiguratorContract {
     
     lazy var apiURL: String = "https://extendsclass.com/api/json-storage/bin/"
     
-    func fetchAllData() async throws -> APIResponse {
+    @available(*, renamed: "fetchAllData()")
+    func fetchAllData(mocked: Bool, completion: @escaping completionHandler<APIResponse>) async throws {
+
+        if mocked {
+            return readLocalFile(forName: "mockedResponse", completionHandler: completion)
+        }
         let function = "edfefba"
         guard let url = URL(string: apiURL+function) else { fatalError("Missing URL") }
         let urlRequest = URLRequest(url: url)
@@ -24,7 +34,7 @@ final class APIConfigurator: ObservableObject {
         
         guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error while fetching data") }
         let decodedPayload = try JSONDecoder().decode(APIResponse.self, from: data)
-        return decodedPayload
+        completion(.success(decodedPayload))
     }
     
 }
