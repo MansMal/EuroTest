@@ -55,12 +55,10 @@ private extension ListViewController {
     func bindData() {
         guard let data = self.viewmodel.collectionData else { return }
         self.configureDataSource()
-        Thread.runOnMain {
-            self.snapshot.deleteAllItems()
-            self.snapshot.appendSections([Section.main])
-            self.snapshot.appendItems(data)
-            self.dataSource?.apply(self.snapshot, animatingDifferences: true)
-        }
+        self.snapshot.deleteAllItems()
+        self.snapshot.appendSections([Section.main])
+        self.snapshot.appendItems(data)
+        self.dataSource?.apply(self.snapshot, animatingDifferences: true)
     }
     func configureDataSource() {
         dataSource = PhotoDataSource(collectionView: collectionView,
@@ -71,16 +69,7 @@ private extension ListViewController {
             ) as? PhotoCollectionViewCell, let url = URL(string: link) else {
                 return PhotoCollectionViewCell()
             }
-            
-            Thread.runOnMain {
-                Task(priority: .high) {
-                    cell.photoImage.image = try await ImageLoader().fetch(url)
-                    cell.title = model.title
-                    cell.sport = model.desc
-                    cell.sub = model.subTitle
-                }
-                _ = model.type == .video ? self.addPlayerIcon(on: cell.contentView) : ()
-            }
+            cell.layout(with: url, and: model)
             return cell
         })
     }
@@ -122,14 +111,7 @@ private extension ListViewController {
         collectionView.delegate = self
         view.addSubview(collectionView)
     }
-    func addPlayerIcon(on view: UIView) {
-        let imageview = UIImageView(image: UIImage(named: "play"))
-        view.addSubview(imageview)
-//        NSLayoutConstraint.activate([
-//            imageview.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            imageview.topAnchor.constraint(equalTo: view.topAnchor, constant: 36)
-//        ])
-    }
+
 }
 
 extension ListViewController: UICollectionViewDelegate {

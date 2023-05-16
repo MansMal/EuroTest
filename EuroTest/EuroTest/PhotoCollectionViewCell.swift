@@ -18,15 +18,13 @@ final class PhotoCollectionViewCell: UICollectionViewCell {
         imgview.roundUpCorners([.topRight, .topLeft], radius: 8)
         return imgview
     }()
-    private var viewmodel: PhotoCellViewModel = PhotoCellViewModel()
+    var viewmodel: PhotoCellViewModel = PhotoCellViewModel()
     var sport, title, sub: String?
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        viewmodel.layout(on: self, sport: sport, title: title, sub: sub)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+
+    func layout(with url: URL, and item: CollectionItem) {
+        Task(priority: .high) {
+            photoImage.image = try await ImageLoader().fetch(url)
+        }
+        viewmodel.layout(on: self, item: item)
     }
 }
