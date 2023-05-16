@@ -11,14 +11,16 @@ import UIKit
 final class PhotoCellViewModel {
  
     func layout(cell: PhotoCollectionViewCell) {
-        cell.backgroundView = UIView()
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = .white
+        cell.backgroundView = backgroundView
         cell.backgroundView?.addSubview(cell.photoImage)
         NSLayoutConstraint.activate([
-            cell.photoImage.centerYAnchor.constraint(equalTo: cell.centerYAnchor),
+            cell.photoImage.topAnchor.constraint(equalTo: cell.topAnchor),
             cell.photoImage.leadingAnchor.constraint(equalTo: cell.leadingAnchor),
             cell.photoImage.widthAnchor.constraint(equalTo: cell.widthAnchor),
-            cell.photoImage.heightAnchor.constraint(equalTo: cell.heightAnchor)
+            cell.photoImage.bottomAnchor.constraint(equalTo: cell.bottomAnchor, constant: -116)
         ])
     }
-
+    
 }

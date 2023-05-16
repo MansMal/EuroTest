@@ -35,6 +35,7 @@ final class ListViewModel: NSObject, DataSourceContract {
                 try await service.fetchAllData(mocked: mocked, completion: { result in
                     switch result {
                     case .success(let payload):
+                        self.dataList = payload
                         self.collectionData = self.mapResponseToCollectionData(with: payload)
                     case .failure(let error):
                         dump(error)
@@ -48,15 +49,15 @@ final class ListViewModel: NSObject, DataSourceContract {
     
     func mapResponseToCollectionData(with data: APIResponse) -> [CollectionItem] {
         let videos = data.videos.map { vid -> CollectionItem in
-            let data = CollectionItem(type: .video, imageURL: vid.thumb,
-                                          subTitle: vid.sport.name, title: vid.title,
-                                          desc: "\(vid.views) views", date: vid.date)
+            let data = CollectionItem(type: .video, imageURL: vid.thumb, videoUrl: vid.url,
+                                      subTitle: vid.sport.name, title: vid.title,
+                                      desc: "\(vid.views) views", date: vid.date)
             return data
         }
         let stories = data.stories.map { stor -> CollectionItem in
-            let story = CollectionItem(type: .story, imageURL: stor.image,
-                                           subTitle: stor.sport.name, title: stor.title,
-                                           desc: "By \(stor.author) at \(stor.date.toDataString())", date: stor.date)
+            let story = CollectionItem(type: .story, imageURL: stor.image, videoUrl: "",
+                                       subTitle: stor.sport.name, title: stor.title,
+                                       desc: "By \(stor.author) at \(stor.date.toDataString())", date: stor.date)
             return story
         }
         let result = self.merge(videos, stories).sorted { $0.date > $1.date }

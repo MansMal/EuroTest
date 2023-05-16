@@ -17,6 +17,7 @@ struct CollectionItem: Identifiable, Hashable {
     var id: UUID? = UUID()
     var type: Type
     var imageURL: String
+    var videoUrl: String
     var subTitle: String
     var title: String
     var desc: String

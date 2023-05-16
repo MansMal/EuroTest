@@ -24,6 +24,14 @@ final class EuroTestTests: XCTestCase {
         XCTAssertEqual(service.dataList.stories.count, 11)
     }
 
+    func mixOneByOne() {
+        let aaa = ["a1", "a2", "a3"]
+        let bbb = ["b1", "b2"]
+        let ccc = ["c1", "c2", "c3", "c4"]
+        let viewmodel = ListViewModel()
+        let result = viewmodel.merge(aaa, bbb, ccc)
+        XCTAssertEqual(result, ["a1", "b1", "c1", "a2", "b2", "c2", "a3", "c3", "c4"])
+    }
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {
