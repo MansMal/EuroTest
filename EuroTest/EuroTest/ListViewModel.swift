@@ -49,13 +49,13 @@ final class ListViewModel: NSObject, DataSourceContract {
     
     func mapResponseToCollectionData(with data: APIResponse) -> [CollectionItem] {
         let videos = data.videos.map { vid -> CollectionItem in
-            let data = CollectionItem(type: .video, imageURL: vid.thumb, videoUrl: vid.url,
+            let data = CollectionItem(id: vid.id, type: .video, imageURL: vid.thumb, videoUrl: vid.url,
                                       subTitle: "\(vid.views) views", title: vid.title,
                                       desc: vid.sport.name, date: vid.date)
             return data
         }
         let stories = data.stories.map { stor -> CollectionItem in
-            let story = CollectionItem(type: .story, imageURL: stor.image, videoUrl: "",
+            let story = CollectionItem(id: stor.id, type: .story, imageURL: stor.image, videoUrl: "",
                                        subTitle: "By \(stor.author) at \(stor.date.toDataString())", title: stor.title,
                                        desc: stor.sport.name, date: stor.date)
             return story

@@ -18,10 +18,9 @@ final class PhotoCollectionViewCell: UICollectionViewCell {
         imgview.roundUpCorners([.topRight, .topLeft], radius: 8)
         return imgview
     }()
-    var viewmodel: PhotoCellViewModel = PhotoCellViewModel()
-    var sport, title, sub: String?
 
     func layout(with url: URL, and item: CollectionItem) {
+        let viewmodel: PhotoCellViewModel = PhotoCellViewModel()
         Task(priority: .high) {
             photoImage.image = try await ImageLoader().fetch(url)
         }

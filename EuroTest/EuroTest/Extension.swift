@@ -37,7 +37,26 @@ extension UIView {
     func roundUpCorners(_ corners: UIRectCorner, radius: CGFloat) {
         self.clipsToBounds = true
         layer.cornerRadius = radius
-            layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+    }
+    
+    @IBInspectable var masksToBounds: Bool {
+        get {
+            return self.layer.masksToBounds
+        }
+        
+        set {
+            self.layer.masksToBounds = newValue
+        }
+    }
+    @IBInspectable var cornerRadius: CGFloat {
+        get {
+            return self.layer.cornerRadius
+        }
+        
+        set {
+            self.layer.cornerRadius = newValue
+        }
     }
 }
 extension UIColor {
@@ -58,5 +77,21 @@ extension UIColor {
         let green = CGFloat(greenInt) / 255.0
         let blue  = CGFloat(blueInt) / 255.0
         self.init(red: red, green: green, blue: blue, alpha: 1)
+    }
+}
+extension String {
+    public var convertHtmlToNSAttributedString: NSAttributedString? {
+        guard let data = data(using: .utf8) else {
+            return nil
+        }
+        do {
+            return try NSAttributedString(data: data, options: [
+                .documentType: NSAttributedString.DocumentType.html,
+                .characterEncoding: String.Encoding.utf8.rawValue
+            ], documentAttributes: nil)
+        } catch {
+            print(error.localizedDescription)
+            return nil
+        }
     }
 }

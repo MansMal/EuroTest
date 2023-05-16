@@ -14,7 +14,7 @@ case video
 }
 
 struct CollectionItem: Identifiable, Hashable {
-    var id: UUID? = UUID()
+    var id: Int
     var type: Type
     var imageURL: String
     var videoUrl: String
