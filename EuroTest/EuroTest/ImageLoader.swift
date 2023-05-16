@@ -14,7 +14,6 @@ actor ImageLoader {
         case inProgress(Task<UIImage, Error>)
         case fetched(UIImage)
     }
-    
     private var images: [URLRequest: LoaderStatus] = [:]
 
     public func fetch(_ url: URL) async throws -> UIImage {
@@ -22,7 +21,7 @@ actor ImageLoader {
         return try await fetch(request)
     }
     
-    public func fetch(_ urlRequest: URLRequest) async throws -> UIImage {
+    private func fetch(_ urlRequest: URLRequest) async throws -> UIImage {
         if let status = images[urlRequest] {
             switch status {
             case .fetched(let image):

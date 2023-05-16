@@ -10,5 +10,9 @@ import UIKit
 final class DetailsViewController: UIViewController {
 
     var story: Story?
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
 }

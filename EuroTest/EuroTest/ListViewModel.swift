@@ -9,15 +9,15 @@ import Foundation
 
 protocol DataSourceContract: AnyObject {
     var service: APIConfiguratorContract { get set }
-    var collectionData: [CollectionItem]! { get set }
-    var dataList: APIResponse! { get set }
+    var collectionData: [CollectionItem]? { get set }
+    var dataList: APIResponse? { get set }
     func bindData(mocked: Bool)
 }
 final class ListViewModel: NSObject, DataSourceContract {
   
     var service: APIConfiguratorContract = APIConfigurator()
-    var dataList: APIResponse!
-    var collectionData: [CollectionItem]!
+    var dataList: APIResponse?
+    var collectionData: [CollectionItem]?
     
     convenience init(for mocked: Bool) {
         self.init()
@@ -50,14 +50,14 @@ final class ListViewModel: NSObject, DataSourceContract {
     func mapResponseToCollectionData(with data: APIResponse) -> [CollectionItem] {
         let videos = data.videos.map { vid -> CollectionItem in
             let data = CollectionItem(type: .video, imageURL: vid.thumb, videoUrl: vid.url,
-                                      subTitle: vid.sport.name, title: vid.title,
-                                      desc: "\(vid.views) views", date: vid.date)
+                                      subTitle: "\(vid.views) views", title: vid.title,
+                                      desc: vid.sport.name, date: vid.date)
             return data
         }
         let stories = data.stories.map { stor -> CollectionItem in
             let story = CollectionItem(type: .story, imageURL: stor.image, videoUrl: "",
-                                       subTitle: stor.sport.name, title: stor.title,
-                                       desc: "By \(stor.author) at \(stor.date.toDataString())", date: stor.date)
+                                       subTitle: "By \(stor.author) at \(stor.date.toDataString())", title: stor.title,
+                                       desc: stor.sport.name, date: stor.date)
             return story
         }
         let result = self.merge(videos, stories).sorted { $0.date > $1.date }
