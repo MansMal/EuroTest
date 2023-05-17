@@ -60,10 +60,22 @@ final class ListViewModel: NSObject, DataSourceContract {
                                        desc: stor.sport.name, date: stor.date)
             return story
         }
-        let result = self.merge(videos, stories).sorted { $0.date > $1.date }
+        let result: [CollectionItem] = self.mixOneByOne(videos: videos, stories: stories)
         return result
     }
-    
+    func mixOneByOne(videos: [CollectionItem], stories: [CollectionItem]) -> [CollectionItem] {
+        var result: [CollectionItem] = []
+        var localVideos = videos
+        for story in stories {
+            result.append(story)
+            for (index, item) in localVideos.enumerated() {
+                result.append(item)
+                localVideos.remove(at: index)
+                break
+            }
+        }
+        return result
+    }
     func merge<T>(_ arrays: [T]...) -> [T] {
         guard let longest = arrays.max(by: { $0.count < $1.count })?.count else { return [] }
         var result = [T]()

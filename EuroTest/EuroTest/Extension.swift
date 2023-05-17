@@ -29,10 +29,14 @@ extension Double {
     }
 }
 
-extension UINavigationController {
-    
+extension DateComponentsFormatter {
+    func difference(from fromDate: Date, to toDate: Date) -> String? {
+        self.allowedUnits = [.minute]
+        self.maximumUnitCount = 1
+        self.unitsStyle = .full
+        return self.string(from: fromDate, to: toDate)
+    }
 }
-
 extension UIView {
     func roundUpCorners(_ corners: UIRectCorner, radius: CGFloat) {
         self.clipsToBounds = true

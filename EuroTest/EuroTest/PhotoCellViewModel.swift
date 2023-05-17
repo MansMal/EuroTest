@@ -13,6 +13,7 @@ final class PhotoCellViewModel: ObservableObject {
     var item: CollectionItem!
     
     func layout(on cell: PhotoCollectionViewCell, item: CollectionItem) {
+        guard cell.contentView.subviews.count == 0 else { return }
         cell.layer.cornerRadius = 8
         cell.contentView.addSubview(cell.photoImage)
         NSLayoutConstraint.activate([
@@ -22,7 +23,6 @@ final class PhotoCellViewModel: ObservableObject {
             cell.photoImage.bottomAnchor.constraint(equalTo: cell.bottomAnchor, constant: -116)
         ])
         _ = item.type == .video ? self.addPlayerIcon(on: cell.photoImage) : ()
-      
         cell.backgroundColor = .white
         let sportView = self.sportView(with: item.desc)
         sportView.translatesAutoresizingMaskIntoConstraints = false
@@ -61,10 +61,10 @@ private extension PhotoCellViewModel {
         let titleView = UIView()
         let label = UILabel()
         label.textColor = .black
-        label.font = .boldSystemFont(ofSize: 22)
+        label.font = .boldSystemFont(ofSize: 20)
         label.text = text
         label.textAlignment = .left
-        label.numberOfLines = 0
+        label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false
         titleView.addSubview(label)
         NSLayoutConstraint.activate([

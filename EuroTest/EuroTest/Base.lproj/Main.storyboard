@@ -151,7 +151,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="authorLabel" destination="qrO-O8-evB" id="PF7-iP-eyE"/>
-                        <outlet property="dataLabel" destination="zHX-fY-Gic" id="HbS-5M-kfs"/>
+                        <outlet property="dateLabel" destination="zHX-fY-Gic" id="p2A-qD-E2o"/>
                         <outlet property="descTextView" destination="xHP-ED-aJC" id="j0R-6J-2JP"/>
                         <outlet property="image" destination="1tG-rF-6qL" id="djQ-xL-Xe3"/>
                         <outlet property="sportTitle" destination="QEf-qB-G7C" id="ApF-D0-dOf"/>
